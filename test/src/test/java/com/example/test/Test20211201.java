@@ -20,6 +20,7 @@ public class Test20211201 extends AbstractBaseTest {
 
     @Test
     public void test1() {
+        System.out.println(port);
         System.out.println(111);
     }
 }
