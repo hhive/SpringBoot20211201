@@ -28,9 +28,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public abstract class AbstractBaseTest {
 
-    @LocalServerPort
-    private int port;
-
 
     /** 测试业务日期(yyyy-mm-dd) */
     protected String transDate = LocalDate.now()
@@ -46,14 +43,5 @@ public abstract class AbstractBaseTest {
     }
 
 
-    /**
-     * 获取访问url
-     *
-     * @param path
-     * @return
-     */
-    public String getUrl(String path) {
-        return String.format("http://localhost:%d" + path, port);
-    }
 
 }
