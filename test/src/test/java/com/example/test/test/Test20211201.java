@@ -1,7 +1,9 @@
-package com.example.test;
+package com.example.test.test;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Value;
+
+import com.example.test.AbstractBaseTest;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -15,12 +17,17 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class Test20211201 extends AbstractBaseTest {
 
-    @Value("${local.server.port}")
-    private String port;
+    public static String string = "static";
 
-    @Test
+    public Test20211201() {
+        System.out.println("Test20211201");
+    }
+    // @Value("${local.server.port}")
+    // private String port;
+
+    // @Test
     public void test1() {
-        System.out.println(port);
+        // System.out.println(port);
         System.out.println(111);
     }
 }
